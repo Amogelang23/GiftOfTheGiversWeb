@@ -1,0 +1,1 @@
+<add key="GiftOfTheGiversFeed" value="https://pkgs.dev.azure.com/ST10359984/33c940ce-4405-4a74-8365-c6864bc38fb2/_packaging/GiftOfTheGiversFeed/nuget/v3/index.json" />

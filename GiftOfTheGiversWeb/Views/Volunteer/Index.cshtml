@@ -1,0 +1,53 @@
+@model IEnumerable<GiftOfTheGiversWeb.Models.Volunteer>
+
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            background: rgba(255, 255, 255, 0.08);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+            .form-control:focus {
+                background: rgba(255, 255, 255, 0.12);
+                color: white;
+            }
+    </style>
+
+    <div class="container mt-5">
+        <div class="glass-panel">
+            <h2>Register as a Volunteer</h2>
+            @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+        }
+            <form method="post" asp-action="Index">
+                <div class="mb-3">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" name="Name" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Skills</label>
+                    <input type="text" name="Skills" class="form-control" required placeholder="e.g., Medical, Logistics, Driving" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Availability</label>
+                    <input type="text" name="Availability" class="form-control" placeholder="e.g., Weekends, Full-time" />
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+        </div>
+    </div>
